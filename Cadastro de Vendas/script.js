@@ -14,6 +14,11 @@ function cadastrarVenda() {
     return;
   }
 
+  if (isNaN(valor) || parseFloat(valor) <= 0) {
+    alert("Por favor, insira um valor de venda válido.");
+    return;
+  }
+
   lista.push({ id: contadorID++, nome: nome, valor_venda: valor });
 
   vendedor.value = "";
