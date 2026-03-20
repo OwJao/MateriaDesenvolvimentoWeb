@@ -34,6 +34,9 @@ function deletarVenda(id) {
 }
 
 function atualizarTabela() {
+  let btnLimpar = document.getElementById("btn-limpar");
+  btnLimpar.style.display = lista.length > 0 ? "block" : "none";
+
   if (lista.length === 0) {
     let dados = document.getElementById("dados");
     dados.innerHTML = "<tr><td style=\"text-align:center\" colspan='7'>Nenhuma venda cadastrada</td></tr>";
@@ -59,4 +62,12 @@ function atualizarTabela() {
     `;
     dados.appendChild(linha);
   });
+}
+
+function limparVendas() {
+  if (confirm("Tem certeza que deseja limpar a tabela?")) {
+    lista = [];
+    contadorID = 0;
+    atualizarTabela();
+  }
 }
