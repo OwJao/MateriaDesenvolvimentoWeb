@@ -48,7 +48,12 @@
 #btn-limpar:hover {
     background-color: rgb(30, 30, 30);
 }
-
+#btn-remover-ultimo {
+    background-color: rgb(45, 55, 194);
+}
+#btn-remover-ultimo:hover {
+    background-color: rgb(30, 30, 194);
+}
 .tabela {
     width: 100%;
     border-collapse: collapse;

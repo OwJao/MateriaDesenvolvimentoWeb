@@ -35,7 +35,9 @@ function deletarVenda(id) {
 
 function atualizarTabela() {
   let btnLimpar = document.getElementById("btn-limpar");
+  let btnRemoverUltimo = document.getElementById("btn-remover-ultimo");
   btnLimpar.style.display = lista.length > 0 ? "block" : "none";
+  btnRemoverUltimo.style.display = lista.length > 0 ? "block" : "none";
 
   if (lista.length === 0) {
     let dados = document.getElementById("dados");
@@ -69,5 +71,15 @@ function limparVendas() {
     lista = [];
     contadorID = 0;
     atualizarTabela();
+  }
+}
+
+function removerUltimaVenda() {
+  if (lista.length > 0) {
+    lista.pop();
+    contadorID--;
+    atualizarTabela();
+  } else {
+    alert("Não há vendas para remover.");
   }
 }
