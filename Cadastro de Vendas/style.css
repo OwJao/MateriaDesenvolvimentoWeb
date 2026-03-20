@@ -1,0 +1,135 @@
+* {
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        color: #444;
+    }
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    input {
+        height: 1.5rem;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px;
+        background-color: rgb(37, 126, 37);
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    button:hover {
+        background-color: rgb(30, 114, 30);
+    }
+    button:active {
+        background-color: rgb(15, 97, 15);
+    }
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+.tabela th,.tabela td {
+    padding: 12px;
+    border-top: 1px solid #37ac3d;
+    border-left: 1px solid #37ac3d;
+    border-right: 1px solid #37ac3d;
+}
+.tabela tbody th,.tabela tbody td {
+    border: 1px solid #c6c5c5;
+}
+
+.tabela thead {
+background-color: #37ac3d;
+color: #fff;
+}
+
+/* Efeito Zebrado */
+/* no monitor da católica funcionou, no meu monitor não vi diferença */
+.tabela tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+/* daqui pra baixo eu peguei e adaptei do site Universe.IO muito bom pra pegar um css bem massa*/
+.btn-deletar {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+}
+
+.btn-deletar, .btn-deletar span {
+    transition: 200ms;
+}
+
+.btn-deletar .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-deletar .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #c41b1b;
+}
+
+.btn-deletar svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.btn-deletar:hover {
+    background: #ff3636;
+}
+
+.btn-deletar:hover .text {
+    color: transparent;
+}
+
+.btn-deletar:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.btn-deletar:focus {
+    outline: none;
+}
+
+.btn-deletar:active .icon svg {
+    transform: scale(0.8);
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Vendas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Cadastro de Vendas</h1>
+      <div class="inputs">
+        <input type="text" placeholder="Nome do vendedor" id="nome" />
+        <input type="number" placeholder="Valor da venda" id="valor" />
+        <button type="button" onclick="cadastrarVenda()">Cadastrar</button>
+      </div>
+    </div>
+    <div class="tabela-container">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Vendedor</th>
+            <th>Valor</th>
+            <th>Desconto</th>
+            <th>Valor Final</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="dados">
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
